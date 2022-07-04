@@ -3,7 +3,7 @@ using Xunit;
 
 namespace CalculationTests
 {
-    public class UnitTest1
+    public class Shapes
     {
         [Fact]
         public void CircleGetAreaTest()
@@ -25,5 +25,16 @@ namespace CalculationTests
             double result = triangle.GetArea();
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void TriangleIsRectangular()
+        {
+            var triangle = new Triangle(5, 4, 3);
+            bool expected = true;
+            bool result = triangle.IsRectangular();
+            Assert.Equal(expected, result);
+        }
+
+        //пишу unit тесты впервые, неуверен насчет того, нужен ли набор данных "входные данные -> ожидаемое значение
     }
 }
